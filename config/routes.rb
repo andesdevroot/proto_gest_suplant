@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :socios
 
 root to: redirect('/socios')
