@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Consulta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tema</th>
+      <th>Dirigente</th>
+      <th>Fecha</th>
+      <th>Descripción</th>
+      <th>Socio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consulta.each do |consultum| %>
+      <tr>
+        <td><%= consultum.tema %></td>
+        <td><%= consultum.diregente %></td>
+        <td><%= consultum.fecha %></td>
+        <td><%= consultum.descripción %></td>
+        <td><%= consultum.socio %></td>
+        <td><%= link_to 'Show', consultum %></td>
+        <td><%= link_to 'Edit', edit_consultum_path(consultum) %></td>
+        <td><%= link_to 'Destroy', consultum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consultum', new_consultum_path %>

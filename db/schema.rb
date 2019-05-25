@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_10_144056) do
+ActiveRecord::Schema.define(version: 2019_05_10_145247) do
+
+  create_table "consulta", force: :cascade do |t|
+    t.string "tema"
+    t.string "diregente"
+    t.date "fecha"
+    t.text "descripción"
+    t.integer "socio_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["socio_id"], name: "index_consulta_on_socio_id"
+  end
 
   create_table "socios", force: :cascade do |t|
     t.string "name"

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tema:</strong>
+  <%= @consultum.tema %>
+</p>
+
+<p>
+  <strong>Diregente:</strong>
+  <%= @consultum.diregente %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @consultum.fecha %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @consultum.descripción %>
+</p>
+
+<p>
+  <strong>Socio:</strong>
+  <%= @consultum.socio %>
+</p>
+
+<%= link_to 'Edit', edit_consultum_path(@consultum) %> |
+<%= link_to 'Back', consulta_path %>
