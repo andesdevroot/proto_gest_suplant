@@ -2,7 +2,7 @@
 
 <h1>Consulta</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Tema</th>
@@ -22,9 +22,9 @@
         <td><%= consultum.fecha %></td>
         <td><%= consultum.descripción %></td>
         <td><%= consultum.socio %></td>
-        <td><%= link_to 'Show', consultum %></td>
-        <td><%= link_to 'Edit', edit_consultum_path(consultum) %></td>
-        <td><%= link_to 'Destroy', consultum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', consultum %></td>
+        <td><%= link_to 'Editar', edit_consultum_path(consultum) %></td>
+        <td><%= link_to 'Borrar', consultum, method: :delete, data: { confirm: 'Estás seguro ?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Consultum', new_consultum_path %>
+<%= link_to 'Crear Consulta', new_consultum_path %>
