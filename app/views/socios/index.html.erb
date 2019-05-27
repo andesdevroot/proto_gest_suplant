@@ -1,7 +1,17 @@
 
 
-
 <h1>Listado de Socios</h1>
+
+<div class ="container">
+  <div class="pull-right">
+    <% link_to "Nueva consulta", new_consultum_path, class:"btn btn-success" %>  
+  </div>
+  <div class="pull-right" style="margin-right: 10px" >
+   <%= search_form_for @q, html: { class:"form-inline"} do |f| %>
+   <%= f.search_field :sap_cont, placeholder: "Buscar SAP", class: "form-control" %>
+   <% end %>  
+     </div>
+</div>
 
 <table class="table table-striped">
   <thead>
@@ -19,7 +29,7 @@
         <td><%= socio.sap %></td>
         <td><%= link_to 'Ver', socio %></td>
         <td><%= link_to 'Editar', edit_socio_path(socio) %></td>
-        <td><%= link_to 'Borrar', socio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Borrar', socio, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
