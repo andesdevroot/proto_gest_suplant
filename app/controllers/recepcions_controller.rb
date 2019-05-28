@@ -70,6 +70,6 @@ class RecepcionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recepcion_params
-      params.require(:recepcion).permit(:tema, :dirigente, :fecha, :socio_id)
+      params.require(:recepcion).permit(:tema, :consulta, :dirigente, :fecha, :socio_id)
     end
 end
