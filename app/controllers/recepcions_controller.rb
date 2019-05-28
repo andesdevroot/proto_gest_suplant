@@ -4,7 +4,8 @@ class RecepcionsController < ApplicationController
   # GET /recepcions
   # GET /recepcions.json
   def index
-    @recepcions = Recepcion.all
+    @q = Recepcion.search(params[:q])
+    @recepcions = @q.result
   end
 
   # GET /recepcions/1
