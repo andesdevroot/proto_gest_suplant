@@ -1,0 +1,19 @@
+
+<%= simple_form_for(@recepcion) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :tema,  as: :radio_buttons,
+    collection: ['Laboral', 'Personal', 'Beneficio sindical'] %> 
+    <%= f.input :dirigente,  as: :radio_buttons,
+    collection: ['Clodomiro Vasquez', 'Orlando Diaz', 'Luis Rebolledo'] %> 
+    <%= f.input :fecha %>
+    <%= f.input :consulta %>
+    <%= f.association :socio %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, " Crear Recepción", class: "btn btn-primary" %>
+  </div>
+<% end %>

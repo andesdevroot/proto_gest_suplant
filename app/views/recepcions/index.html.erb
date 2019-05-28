@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recepciones</h1>
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+      <th>Tema</th>
+      <th>Dirigente</th>
+      <th>Fecha</th>
+      <th>Socio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recepcions.each do |recepcion| %>
+      <tr>
+        <td><%= recepcion.tema %></td>
+        <td><%= recepcion.dirigente %></td>
+        <td><%= recepcion.fecha %></td>
+        <td><%= recepcion.socio %></td>
+        <td><%= link_to 'Ver', recepcion %></td>
+        <td><%= link_to 'Editar', edit_recepcion_path(recepcion) %></td>
+        <td><%= link_to 'Destroy', recepcion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Nueva Recepción', new_recepcion_path, class:"btn btn-primary" %>

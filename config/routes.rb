@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :recepcions
   resources :consulta
   devise_for :users
   resources :socios
