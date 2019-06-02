@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_28_152353) do
+ActiveRecord::Schema.define(version: 2019_06_02_224901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,34 @@ ActiveRecord::Schema.define(version: 2019_05_28_152353) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["socio_id"], name: "index_consulta_on_socio_id"
+  end
+
+  create_table "empleados", force: :cascade do |t|
+    t.string "nombre_completo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "empleados_tareas", id: false, force: :cascade do |t|
+    t.bigint "empleado_id", null: false
+    t.bigint "tarea_id", null: false
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.string "description"
+    t.boolean "completed", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "socio_id"
+    t.string "dirigente"
+    t.index ["socio_id"], name: "index_lists_on_socio_id"
+  end
+
+  create_table "proyectos", force: :cascade do |t|
+    t.string "nombre"
+    t.date "fecha_entrega"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "recepcions", force: :cascade do |t|
@@ -44,6 +72,31 @@ ActiveRecord::Schema.define(version: 2019_05_28_152353) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tareas", force: :cascade do |t|
+    t.string "nombre"
+    t.integer "prioridad"
+    t.bigint "proyecto_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["proyecto_id"], name: "index_tareas_on_proyecto_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.bigint "todo_list_id"
+    t.string "name"
+    t.boolean "completed"
+    t.date "due"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["todo_list_id"], name: "index_tasks_on_todo_list_id"
+  end
+
+  create_table "todo_lists", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -57,5 +110,8 @@ ActiveRecord::Schema.define(version: 2019_05_28_152353) do
   end
 
   add_foreign_key "consulta", "socios"
+  add_foreign_key "lists", "socios"
   add_foreign_key "recepcions", "socios"
+  add_foreign_key "tareas", "proyectos"
+  add_foreign_key "tasks", "todo_lists"
 end

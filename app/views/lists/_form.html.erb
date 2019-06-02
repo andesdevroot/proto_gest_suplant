@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@list) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+  	<%= f.association :socio %>
+  	<%= f.input :dirigente,  as: :radio_buttons,
+    collection: ['Clodomiro Vasquez', 'Orlando Diaz', 'Luis Rebolledo'], label:'Desiginar responsable' %> 
+    <%= f.input :description, label: 'Compromiso' %>
+    <%= f.input :completed %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
