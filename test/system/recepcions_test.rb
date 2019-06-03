@@ -14,6 +14,7 @@ class RecepcionsTest < ApplicationSystemTestCase
     visit recepcions_url
     click_on "New Recepcion"
 
+    fill_in "Consulta", with: @recepcion.consulta
     fill_in "Dirigente", with: @recepcion.dirigente
     fill_in "Fecha", with: @recepcion.fecha
     fill_in "Socio", with: @recepcion.socio_id
@@ -28,6 +29,7 @@ class RecepcionsTest < ApplicationSystemTestCase
     visit recepcions_url
     click_on "Edit", match: :first
 
+    fill_in "Consulta", with: @recepcion.consulta
     fill_in "Dirigente", with: @recepcion.dirigente
     fill_in "Fecha", with: @recepcion.fecha
     fill_in "Socio", with: @recepcion.socio_id

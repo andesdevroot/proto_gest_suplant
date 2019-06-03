@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tema:</strong>
+  <%= @recepcion.tema %>
+</p>
+
+<p>
+  <strong>Dirigente:</strong>
+  <%= @recepcion.dirigente %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @recepcion.fecha %>
+</p>
+
+<p>
+  <strong>Consulta:</strong>
+  <%= @recepcion.consulta %>
+</p>
+
+<p>
+  <strong>Socio:</strong>
+  <%= @recepcion.socio %>
+</p>
+
+<%= link_to 'Edit', edit_recepcion_path(@recepcion) %> |
+<%= link_to 'Back', recepcions_path %>
