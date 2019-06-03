@@ -28,8 +28,8 @@
         <td><%= socio.name %></td>
         <td><%= socio.sap %></td>
         <td><%= link_to 'Ver', socio %></td>
-        <td><%= link_to 'Editar', edit_socio_path(socio) %></td>
-        <td><%= link_to 'Borrar', socio, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+        <td><%= link_to 'Actualizar socio', edit_socio_path(socio) %></td>
+        <td><% link_to 'Borrar', socio, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
