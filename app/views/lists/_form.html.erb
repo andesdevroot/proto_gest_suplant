@@ -7,7 +7,8 @@
   	<%= f.association :socio %>
   	<%= f.input :dirigente,  as: :radio_buttons,
     collection: ['Clodomiro Vasquez', 'Orlando Diaz', 'Luis Rebolledo'], label:'Designar responsable' %> 
-    <%= f.input :description, label: 'Compromiso' %>
+    <%= f.input :description, label: 'Compromiso con el socio' %>
+     <%= f.input :fecha_limite, label: 'Fecha limite compromiso' %>
     <%= f.input :completed %>
   </div>
 
@@ -15,3 +16,4 @@
     <%= f.button :submit, 'Crear compromiso', class: 'btn btn-primary' %>
   </div>
 <% end %>
+

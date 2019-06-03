@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_02_224901) do
+ActiveRecord::Schema.define(version: 2019_06_03_154852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(version: 2019_06_02_224901) do
     t.datetime "updated_at", null: false
     t.bigint "socio_id"
     t.string "dirigente"
+    t.bigint "recepcions_id"
+    t.date "fecha_limite"
+    t.index ["recepcions_id"], name: "index_lists_on_recepcions_id"
     t.index ["socio_id"], name: "index_lists_on_socio_id"
   end
 
@@ -110,6 +113,7 @@ ActiveRecord::Schema.define(version: 2019_06_02_224901) do
   end
 
   add_foreign_key "consulta", "socios"
+  add_foreign_key "lists", "recepcions", column: "recepcions_id"
   add_foreign_key "lists", "socios"
   add_foreign_key "recepcions", "socios"
   add_foreign_key "tareas", "proyectos"
