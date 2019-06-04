@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tema: MyString
+  compromiso: MyString
+  dirigente: MyString
+  estatus: MyString
+  fecha_ingreso: 2019-06-04
+  fecha_tope: MyString
+  respuesta: MyText
+  socio: one
+
+two:
+  tema: MyString
+  compromiso: MyString
+  dirigente: MyString
+  estatus: MyString
+  fecha_ingreso: 2019-06-04
+  fecha_tope: MyString
+  respuesta: MyText
+  socio: two

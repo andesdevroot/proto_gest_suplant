@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tema:</strong>
+  <%= @compromiso.tema %>
+</p>
+
+<p>
+  <strong>Compromiso:</strong>
+  <%= @compromiso.compromiso %>
+</p>
+
+<p>
+  <strong>Dirigente:</strong>
+  <%= @compromiso.dirigente %>
+</p>
+
+<p>
+  <strong>Estatus:</strong>
+  <%= @compromiso.estatus %>
+</p>
+
+<p>
+  <strong>Fecha ingreso:</strong>
+  <%= @compromiso.fecha_ingreso %>
+</p>
+
+<p>
+  <strong>Fecha tope:</strong>
+  <%= @compromiso.fecha_tope %>
+</p>
+
+<p>
+  <strong>Respuesta:</strong>
+  <%= @compromiso.respuesta %>
+</p>
+
+<p>
+  <strong>Socio:</strong>
+  <%= @compromiso.socio.name %>
+</p>
+
+<%= link_to 'Edit', edit_compromiso_path(@compromiso) %> |
+<%= link_to 'Back', compromisos_path %>

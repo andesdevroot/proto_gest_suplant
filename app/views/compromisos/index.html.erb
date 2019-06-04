@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Compromiso</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tema</th>
+      <th>Compromiso</th>
+      <th>Dirigente</th>
+      <th>Estatus</th>
+      <th>Fecha ingreso</th>
+      <th>Estimado para respuesta</th>
+      <th>Respuesta al socio</th>
+      <th>Socio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @compromisos.each do |compromiso| %>
+      <tr>
+        <td><%= compromiso.tema %></td>
+        <td><%= compromiso.compromiso %></td>
+        <td><%= compromiso.dirigente %></td>
+        <td><%= compromiso.estatus %></td>
+        <td><%= compromiso.fecha_ingreso %></td>
+        <td><%= compromiso.fecha_tope %></td>
+        <td><%= compromiso.respuesta %></td>
+        <td><%= compromiso.socio.name %></td>
+        <td><%= link_to 'Ver', compromiso %></td>
+        <td><%= link_to 'Actualizar', edit_compromiso_path(compromiso) %></td>
+        <td><%= link_to 'Borrar', compromiso, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Compromiso', new_compromiso_path, class: "btn btn-primary" %>

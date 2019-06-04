@@ -1,4 +1,4 @@
 class Socio < ApplicationRecord
-	has_many :recepcion
-	has_many :asistencium
+	has_many :recepcions
+  has_many :compromisos
 end
