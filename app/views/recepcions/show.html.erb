@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>Tema:</strong>
@@ -22,8 +22,8 @@
 
 <p>
   <strong>Socio:</strong>
-  <%= @recepcion.socio %>
+  <%= @recepcion.socio.name %>
 </p>
 
-<%= link_to 'Edit', edit_recepcion_path(@recepcion) %> |
-<%= link_to 'Back', recepcions_path %>
+<%= link_to 'Editar', edit_recepcion_path(@recepcion) %> |
+<%= link_to 'Volver', recepcions_path %>
