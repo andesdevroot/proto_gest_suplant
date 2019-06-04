@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :asistencia
   resources :lists
   resources :recepcions
   resources :consulta

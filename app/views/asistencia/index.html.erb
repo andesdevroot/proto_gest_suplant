@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Historial Reuniones por Socios</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tipo reunion</th>
+      <th>Fecha</th>
+      <th>Asistencia</th>
+      <th>Socio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @asistencia.each do |asistencium| %>
+      <tr>
+        <td><%= asistencium.tipo_reunion %></td>
+        <td><%= asistencium.fecha %></td>
+        <td><%= asistencium.asistencia %></td>
+        <td><%= asistencium.socio.name %></td>
+        <td><%= link_to 'Ver', asistencium %></td>
+        <td><%= link_to 'Editar', edit_asistencium_path(asistencium) %></td>
+        <td><%= link_to 'Borrar', asistencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Asistencia', new_asistencium_path, class: 'btn btn-primary' %>

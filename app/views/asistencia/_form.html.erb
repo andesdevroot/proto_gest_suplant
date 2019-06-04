@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@asistencium) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+
+    <%= f.input :tipo_reunion %>
+    <%= f.input :fecha %>
+   <%= f.input :asistencia, as: :radio_buttons, collection: [['SI'], ['NO'] ], value_method: :first %>
+    <%= f.association :socio %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Crear asistencia', class: "btn btn-primary" %>
+  </div>
+<% end %>

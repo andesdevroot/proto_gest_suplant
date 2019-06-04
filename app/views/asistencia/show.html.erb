@@ -1,0 +1,24 @@
+
+
+<p>
+  <strong>Tipo reunion:</strong>
+  <%= @asistencium.tipo_reunion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @asistencium.fecha %>
+</p>
+
+<p>
+  <strong>Asistencia:</strong>
+  <%= @asistencium.asistencia %>
+</p>
+
+<p>
+  <strong>Socio:</strong>
+  <%= @asistencium.socio %>
+</p>
+
+<%= link_to 'Editar', edit_asistencium_path(@asistencium) %> |
+<%= link_to 'Volver', asistencia_path %>
