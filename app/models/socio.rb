@@ -1,3 +1,4 @@
 class Socio < ApplicationRecord
-	has_many :recepcions
+	has_many :recepcion
+
 end
