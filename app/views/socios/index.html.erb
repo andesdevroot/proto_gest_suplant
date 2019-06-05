@@ -13,7 +13,7 @@
      </div>
      <div class="pull-right" style="margin-right: 10px" >
       <%= search_form_for @q, html: { class:"form-inline"} do |f| %>
-      <%= f.search_field :name_cont, placeholder: "Buscar  Nombre Socio", class: "form-control" %>
+      <%= f.search_field :name_cont, placeholder: "Buscar por Nombre", class: "form-control" %>
       <% end %>
         </div>
 </div>
@@ -32,7 +32,7 @@
       <tr>
         <td><%= socio.name %></td>
         <td><%= socio.sap %></td>
-        <td><%= link_to 'Ver', socio %></td>
+        <td><% link_to 'Ver', socio %></td>
         <td><%= link_to 'Actualizar socio', edit_socio_path(socio) %></td>
         <td><% link_to 'Borrar', socio, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
       </tr>
