@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fichas de Socios</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha nacimiento</th>
+      <th>Domicilio</th>
+      <th>Comuna</th>
+      <th>Correo</th>
+      <th>Fono</th>
+      <th>Estado civil</th>
+      <th>Cargas familiares</th>
+      <th>Cargo</th>
+      <th>Escala</th>
+      <th>Grupo trabajo</th>
+      <th>Email corporativo</th>
+      <th>Fecha ingreso</th>
+      <th>Socio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fichas.each do |ficha| %>
+      <tr>
+        <td><%= ficha.nombre %></td>
+        <td><%= ficha.fecha_nacimiento %></td>
+        <td><%= ficha.domicilio %></td>
+        <td><%= ficha.comuna %></td>
+        <td><%= ficha.correo %></td>
+        <td><%= ficha.fono %></td>
+        <td><%= ficha.estado_civil %></td>
+        <td><%= ficha.cargas_familiares %></td>
+        <td><%= ficha.cargo %></td>
+        <td><%= ficha.escala %></td>
+        <td><%= ficha.grupo_trabajo %></td>
+        <td><%= ficha.email_corporativo %></td>
+        <td><%= ficha.fecha_ingreso %></td>
+        <td><%= ficha.socio %></td>
+        <td><% link_to 'Show', ficha %></td>
+        <td><%= link_to 'Actualizar Ficha', edit_ficha_path(ficha) %></td>
+        <td><% link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear Ficha', new_ficha_path, class: "btn btn-primary" %>

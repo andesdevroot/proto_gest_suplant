@@ -4,7 +4,8 @@
 
 <div class ="container">
   <div class="pull-right">
-    <% link_to "Nueva consulta", new_consultum_path, class:"btn btn-success" %>
+  <%= link_to 'Crear Ficha socio', new_ficha_path, class:"btn btn-success" %>
+  <%= link_to 'Crear Nuevo socio', new_socio_path, class:"btn btn-primary" %>
   </div>
   <div class="pull-right" style="margin-right: 10px" >
    <%= search_form_for @q, html: { class:"form-inline"} do |f| %>
@@ -43,3 +44,4 @@
 <br>
 
 <%= link_to 'Crear Nuevo socio', new_socio_path, class:"btn btn-primary" %>
+<%= link_to 'Crear Ficha socio', new_ficha_path, class:"btn btn-success" %>

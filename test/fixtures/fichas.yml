@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  fecha_nacimiento: 2019-06-05
+  domicilio: MyString
+  comuna: MyString
+  correo: MyString
+  fono: MyString
+  estado_civil: MyString
+  cargas_familiares: MyString
+  cargo: MyString
+  escala: MyString
+  grupo_trabajo: MyString
+  email_corporativo: MyString
+  fecha_ingreso: 2019-06-05
+  socio: one
+
+two:
+  nombre: MyString
+  fecha_nacimiento: 2019-06-05
+  domicilio: MyString
+  comuna: MyString
+  correo: MyString
+  fono: MyString
+  estado_civil: MyString
+  cargas_familiares: MyString
+  cargo: MyString
+  escala: MyString
+  grupo_trabajo: MyString
+  email_corporativo: MyString
+  fecha_ingreso: 2019-06-05
+  socio: two

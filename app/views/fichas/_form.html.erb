@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@ficha) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :nombre %>
+    <%= f.input :fecha_nacimiento %>
+    <%= f.input :domicilio %>
+    <%= f.input :comuna %>
+    <%= f.input :correo %>
+    <%= f.input :fono %>
+    <%= f.input :estado_civil %>
+    <%= f.input :cargas_familiares %>
+    <%= f.input :cargo %>
+    <%= f.input :escala %>
+    <%= f.input :grupo_trabajo %>
+    <%= f.input :email_corporativo %>
+    <%= f.input :fecha_ingreso %>
+    <%= f.association :socio %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Crear Ficha', class: "btn btn-primary" %>
+  </div>
+<% end %>
