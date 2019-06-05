@@ -2,6 +2,12 @@
 
 <h1>Nueva Recepción</h1>
 
+<div class="pull-right" style="margin-right: 10px" >
+ <%= search_form_for @q, html: { class:"form-inline"} do |f| %>
+ <%= f.search_field :consulta_cont, placeholder: "Buscar por Consulta", class: "form-control" %>
+ <% end %>
+   </div>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -23,7 +29,7 @@
         <td><%= recepcion.consulta %></td>
         <td><%= recepcion.socio.name %></td>
         <td><%= link_to 'Ver', recepcion %></td>
-        <td><%= link_to 'Editar', edit_recepcion_path(recepcion) %></td>
+        <td><%= link_to 'Actualizar consulta', edit_recepcion_path(recepcion) %></td>
         <td><%link_to 'Borrar', recepcion, method: :delete, data: { confirm: 'Está seguro?' } %></td>
       </tr>
     <% end %>
