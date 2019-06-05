@@ -41,7 +41,7 @@
         <td><%= ficha.fecha_ingreso %></td>
         <td><% link_to 'Show', ficha %></td>
         <td><%= link_to 'Actualizar Ficha', edit_ficha_path(ficha) %></td>
-        <td><% link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=link_to 'Borrar', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
