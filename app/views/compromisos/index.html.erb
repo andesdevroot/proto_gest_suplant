@@ -10,7 +10,7 @@
       <th>Dirigente</th>
       <th>Estatus</th>
       <th>Socio</th>
-      <th>Fecha de consulta</th>
+      <th>Fecha Consulta</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,7 +28,7 @@
         <td><% compromiso.tema %></td>
         <td><% compromiso.fecha_tope %></td>
 
-        <td><%= link_to 'Ver detalle', compromiso %></td>
+        <td><% link_to 'Ver detalle', compromiso %></td>
         <td><% link_to 'Actualizar', edit_compromiso_path(compromiso) %></td>
         <td><% link_to 'Borrar', compromiso, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
       </tr>
