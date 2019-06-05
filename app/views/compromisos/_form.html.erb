@@ -9,7 +9,7 @@
       <%= f.input :dirigente, as: :radio_buttons, collection: [['Clodomiro Vasquez'], ['Orlando Diaz'],['Luis Rebolledo'] ], value_method: :first %>
     <%= f.input :estatus, as: :radio_buttons, collection: [['Abierto'], ['Cerrado'],['Pendiente'] ], value_method: :first %>
     <%= f.input :fecha_ingreso %>
-    <%= f.input :fecha_tope, as: :radio_buttons, collection: [['1 semana'], ['2 semanas'],['3 semanas'] ], value_method: :first %> 
+    <%= f.input :fecha_tope, as: :radio_buttons, collection: [['1 semana'], ['2 semanas'],['3 semanas'] ], value_method: :first %>
     <%= f.input :respuesta %>
     <%= f.association :socio %>
   </div>

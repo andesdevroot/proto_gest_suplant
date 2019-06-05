@@ -4,12 +4,13 @@
 
 <div class ="container">
   <div class="pull-right">
-    <% link_to "Nueva consulta", new_consultum_path, class:"btn btn-success" %>  
+    <% link_to "Nueva consulta", new_consultum_path, class:"btn btn-success" %>
   </div>
   <div class="pull-right" style="margin-right: 10px" >
    <%= search_form_for @q, html: { class:"form-inline"} do |f| %>
    <%= f.search_field :sap_cont, placeholder: "Buscar  N° SAP", class: "form-control" %>
-   <% end %>  
+   <%= f.search_field :name_cont, placeholder: "Buscar por nombre", class: "form-control" %>
+   <% end %>
      </div>
 </div>
 
@@ -38,4 +39,3 @@
 <br>
 
 <%= link_to 'Crear Nuevo socio', new_socio_path, class:"btn btn-primary" %>
-

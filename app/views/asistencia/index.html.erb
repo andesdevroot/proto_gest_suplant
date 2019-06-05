@@ -22,7 +22,7 @@
         <td><%= asistencium.socio.name %></td>
         <td><%= link_to 'Ver', asistencium %></td>
         <td><%= link_to 'Editar', edit_asistencium_path(asistencium) %></td>
-        <td><%= link_to 'Borrar', asistencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%link_to 'Borrar', asistencium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
