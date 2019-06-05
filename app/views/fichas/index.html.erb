@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Nombre</th>
+      <th>Socio</th>
       <th>Fecha nacimiento</th>
       <th>Domicilio</th>
       <th>Comuna</th>
@@ -26,7 +26,7 @@
   <tbody>
     <% @fichas.each do |ficha| %>
       <tr>
-        <td><%= ficha.nombre %></td>
+        <td><%= ficha.socio.name %></td>
         <td><%= ficha.fecha_nacimiento %></td>
         <td><%= ficha.domicilio %></td>
         <td><%= ficha.comuna %></td>
@@ -39,7 +39,6 @@
         <td><%= ficha.grupo_trabajo %></td>
         <td><%= ficha.email_corporativo %></td>
         <td><%= ficha.fecha_ingreso %></td>
-        <td><%= ficha.socio %></td>
         <td><% link_to 'Show', ficha %></td>
         <td><%= link_to 'Actualizar Ficha', edit_ficha_path(ficha) %></td>
         <td><% link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>

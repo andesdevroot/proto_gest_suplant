@@ -3,8 +3,11 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :nombre %>
+
+<div class="container-fluid" >
+  <div class="form-groups">
+    <%= f.association :socio %>
+    <% f.input :nombre %>
     <%= f.input :fecha_nacimiento %>
     <%= f.input :domicilio %>
     <%= f.input :comuna %>
@@ -17,10 +20,10 @@
     <%= f.input :grupo_trabajo %>
     <%= f.input :email_corporativo %>
     <%= f.input :fecha_ingreso %>
-    <%= f.association :socio %>
-  </div>
-
+    <% f.association :socio %>
   <div class="form-actions">
     <%= f.button :submit, 'Crear Ficha', class: "btn btn-primary" %>
   </div>
+</div>
+</div>
 <% end %>

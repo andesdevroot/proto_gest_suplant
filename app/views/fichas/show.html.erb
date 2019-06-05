@@ -67,8 +67,8 @@
 
 <p>
   <strong>Socio:</strong>
-  <%= @ficha.socio %>
+  <%= @ficha.socio.name %>
 </p>
 
-<%= link_to 'Edit', edit_ficha_path(@ficha) %> |
-<%= link_to 'Back', fichas_path %>
+<%= link_to 'Actualizar', edit_ficha_path(@ficha) %> |
+<%= link_to 'Volver', fichas_path %>
