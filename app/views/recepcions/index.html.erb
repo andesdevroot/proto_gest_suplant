@@ -24,7 +24,7 @@
     <% @recepcions.each do |recepcion| %>
       <tr>
         <td><%= recepcion.tema %></td>
-        <td><%= recepcion.dirigente %></td>
+        <td><% recepcion.dirigente %></td>
         <td><%= recepcion.fecha %></td>
         <td><%= recepcion.consulta %></td>
         <td><%= recepcion.socio.name %></td>
