@@ -2,6 +2,16 @@
 
 <h1>Compromiso</h1>
 
+<div class ="container">
+  <div class="pull-right">
+<div class="pull-right" style="margin-right: 10px" >
+ <%= search_form_for @q, html: { class:"form-inline"} do |f| %>
+ <%= f.search_field :dirigente_cont, placeholder: "Buscar por dirigente", class: "form-control" %>
+ <% end %>
+
+</div>
+</div>
+
 <table class="table table-striped">
   <thead>
     <tr>

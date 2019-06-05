@@ -4,7 +4,8 @@ class CompromisosController < ApplicationController
   # GET /recepcions
   # GET /recepcions.json
   def index
-    @compromisos = Compromiso.all
+    @q = Compromiso.search(params[:q])
+    @compromisos =   @q.result(:distinct => true)
   end
 
 
