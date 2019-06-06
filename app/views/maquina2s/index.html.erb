@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Maquina2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Socio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maquina2s.each do |maquina2| %>
+      <tr>
+        <td><%= maquina2.area %></td>
+        <td><%= maquina2.socio %></td>
+        <td><%= link_to 'Show', maquina2 %></td>
+        <td><%= link_to 'Edit', edit_maquina2_path(maquina2) %></td>
+        <td><%= link_to 'Destroy', maquina2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Maquina2', new_maquina2_path %>

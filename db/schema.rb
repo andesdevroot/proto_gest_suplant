@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_154718) do
+ActiveRecord::Schema.define(version: 2019_06_06_173524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,20 @@ ActiveRecord::Schema.define(version: 2019_06_05_154718) do
     t.index ["socio_id"], name: "index_fichas_on_socio_id"
   end
 
+  create_table "maquina2s", force: :cascade do |t|
+    t.string "area"
+    t.bigint "socio_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["socio_id"], name: "index_maquina2s_on_socio_id"
+  end
+
+  create_table "maquinas", force: :cascade do |t|
+    t.string "area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "recepcions", force: :cascade do |t|
     t.string "tema"
     t.string "dirigente"
@@ -130,5 +144,6 @@ ActiveRecord::Schema.define(version: 2019_06_05_154718) do
   add_foreign_key "compromisos", "socios"
   add_foreign_key "consulta", "socios"
   add_foreign_key "fichas", "socios"
+  add_foreign_key "maquina2s", "socios"
   add_foreign_key "recepcions", "socios"
 end

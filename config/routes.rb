@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :maquina2s
+  resources :maquinas
   resources :fichas
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :compromisos
