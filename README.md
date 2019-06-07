@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prototype management app for partners - consultations for mining unions.
 
-Things you may want to cover:
+Steps to run app:
 
-* Ruby version
+1.- Clone repo
+2.- bundle install
+3.- rake db: migrate
 
-* System dependencies
+For general administration of the app go to RAILS ADMIN
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use for RAILS 5

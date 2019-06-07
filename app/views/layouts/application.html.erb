@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GestionSuplantApp</title>
+    <title>Gestion App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Gestión Suplant app</a>
+      <a class="navbar-brand" href="/">Gestión APP</a>
     </div
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -33,10 +33,10 @@
       <p class="navbar-text pull-right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %>
+  <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
-  <%= link_to "Crear Cuenta", new_user_registration_path, :class => 'navbar-link'  %>
+  <%= link_to "Crear Cuenta", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Ingresar", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 </p>
@@ -54,8 +54,8 @@
 </div>
 
 <footer>
-  <div class="container">
-    SUPLANT <%= Time.now.year %> Desarrollado por Andes Web Chile | Código César Rivas.
+  <div class="cDeveloped by Andes Web Chileontainer">
+Developed by AWC | CRM  <%= Time.now.year %>
   </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
