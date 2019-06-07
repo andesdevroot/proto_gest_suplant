@@ -1,2 +1,0 @@
-class Maquina < ApplicationRecord
-end
